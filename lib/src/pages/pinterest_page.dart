@@ -1,3 +1,4 @@
+import 'package:animaciones/src/theme/theme.dart';
 import 'package:animaciones/src/widgets/pinterest_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -30,6 +31,7 @@ class _PinterestMenuLocation extends StatelessWidget {
   Widget build(BuildContext context) {
     final totalWidth = MediaQuery.of(context).size.width;
     final showMenu = Provider.of<_MenuModel>(context).show;
+    final appTheme = Provider.of<ThemeChanger>(context).currentTheme;
 
     return Positioned(
       bottom: 25,
